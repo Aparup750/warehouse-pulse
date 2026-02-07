@@ -1,7 +1,7 @@
 import { useScrollAnimation } from '@/hooks/useScrollAnimation';
 import interiorBar from '@/assets/interior-bar.webp';
 import interiorDining from '@/assets/interior-dining.webp';
-import interiorNeon from '@/assets/interior-neon.webp';
+
 
 const AboutSection = () => {
   const { ref: titleRef, isVisible: titleVisible } = useScrollAnimation();
@@ -51,18 +51,13 @@ const AboutSection = () => {
           </div>
 
           {/* Row 3 */}
-          <div ref={row3Ref} className={`flex flex-col md:flex-row items-center gap-10 scroll-slide-left ${row3Visible ? 'visible' : ''}`}>
-            <div className="flex-1 space-y-4">
+          <div ref={row3Ref} className={`scroll-slide-left ${row3Visible ? 'visible' : ''}`}>
+            <div className="max-w-2xl mx-auto text-center space-y-4">
               <h3 className="font-oswald text-2xl md:text-3xl uppercase tracking-wider text-foreground">Electric Atmosphere</h3>
               <p className="text-muted-foreground leading-relaxed text-lg">
                 Whether you're here for the signature cocktails or the electric atmosphere, the night belongs to you.
                 Live DJ sets, curated playlists, and a vibe that keeps you coming back for more.
               </p>
-            </div>
-            <div className="flex-1">
-              <div className="overflow-hidden rounded-lg neon-border">
-                <img src={interiorNeon} alt="Warehouse neon atmosphere" className="w-full h-72 object-cover hover:scale-105 transition-transform duration-700" loading="lazy" />
-              </div>
             </div>
           </div>
         </div>
